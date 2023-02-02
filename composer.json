@@ -6,14 +6,10 @@
     "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
-        "erusev/parsedown": "^1.7",
-        "firebase/php-jwt": "^6.3",
-        "flutterwavedev/flutterwave-v3": "^1.0",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "kreait/laravel-firebase": "^4.2",
         "laravel/framework": "^8.75",
-        "laravel/sanctum": "^2.15",
+        "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5"
     },
     "require-dev": {
@@ -29,13 +25,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/"
-        },
-        "files": [
-            "app/Helpers/Constants.php",
-            "app/Helpers/Global.php",
-            "app/Helpers/Model.php",
-            "app/Helpers/V1/Auth.php"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -57,9 +47,7 @@
             "@php artisan key:generate --ansi"
         ],
         "compile": [
-          "@php app/console assetic:dump --env=prod --no-debug",
-          "MyVendor\\MyClass::postDeployComposerCallback",
-          "pecl install grpc && echo 'extension=grpc.so' > /app/.heroku/php/etc/php/conf.d/999-ext-grpc.ini"
+            "pecl install grpc && echo 'extension=grpc.so' > /app/.heroku/php/etc/php/conf.d/999-ext-grpc.ini"
         ]
     },
     "extra": {
