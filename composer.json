@@ -47,7 +47,6 @@
             "@php artisan key:generate --ansi"
         ],
         "compile": [
-            "apt-get install php-pear",
             "pecl install grpc && echo 'extension=grpc.so' > /app/.heroku/php/etc/php/conf.d/999-ext-grpc.ini"
         ]
     },
